@@ -3,9 +3,16 @@
 <head>
 	<title>자바스크립트</title>
 	<script>
-			str="자바스크립트의 세계에 오신것을 환영합니다.";
+	//indexOf
+			str="자바 스크립트의 세계에 오신것을 환영합니다.";
 			n= str.indexOf("세계");
 			document.write("세계 문장열은:" + n+"번째");
+			n= str.indexOf("세계",10);
+			document.write("세계 문장열은:" + n+"번째");
+			n= str.lastIndexOf("세계",10);
+			document.write("세계 문장열은:" + n+"번째");
+	//콘솔창에 출력
+			console.log("세계 문장열은:" + n+"번째");
 	</script>
 </head>
 <body>
