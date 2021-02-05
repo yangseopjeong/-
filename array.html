@@ -29,6 +29,46 @@
 		//shift()
 		document.write("shift: 빠진 것:  "+fruits.shift()+"<br>");
 		document.write(fruits+"<br>");
+		//slice()
+		str=[1,2,3,4,5,6,7,8,9,10]
+		sli=str.slice(3,5);
+		document.write("sli 원본: "+str+"<br>");
+		document.write("sli : "+sli+"<br>");
+		//sort()배열을 적절한 순서대로 정렬
+		str=[3,5,7,9,3,2,6,4,111];
+		document.write("str 원본: "+str+"<br>");
+		//그냥은 문자 정렬
+		str.sort();
+		document.write("sort 후: "+str+"<br>");
+		//오름차순 sort
+		str.sort(function(a,b){return a-b});
+		document.write("sort 후: "+str+"<br>");
+		//splice(바꿀위치 바꿀개수 대상)배열의 기존요소를 삭제 또는 교체하거나 새요소를 추가하여 배열의 내용을 변경
+		var months =["jan","maech","april","june"];
+		document.write("splice 전: "+months+"<br>");
+		months.splice(1,0,"feb");
+		document.write("splice 후: "+months+"<br>");
+		months.splice(4,1,"May");
+		document.write("splice 후: "+months+"<br>");
+		alphabet=new Array();
+		for(i=65;i<=90;i++){
+			alphabet.push(String.fromCharCode(i));
+		}
+		for(i=0;i<alphabet.length;i++){
+			document.write(alphabet[i]+"<br>");
+		}
+		
+		while(1){
+			item = alphabet.shift();
+			if(item == null){
+				break;
+			}
+			document.write(item+"<br>");
+		}
+		str="abcdefghijklopqrsuvwxyz";
+		for(i=0;i<str.length;i++){
+			document.write(str.slice(0,i+1)+"<br>");
+		}
 	</script>
 </head>
 <body>
