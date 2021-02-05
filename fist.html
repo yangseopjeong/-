@@ -3,29 +3,52 @@
 <head>
 	<title>자바스크립트</title>
 	<script>
-	//indexOf
-			str="자바 스크립트의 세계에 오신것을 환영합니다.";
-			n= str.indexOf("세계");
-			document.write("세계 문장열은:" + n+"번째"+"<br>");
-			n= str.indexOf("세계",10);
-			document.write("세계 문장열은:" + n+"번째"+"<br>");
-			n= str.lastIndexOf("세계",10);
-			document.write("세계 문장열은:" + n+"번째"+"<br>");
-	//콘솔창에 출력
-			console.log("세계 문장열은:" + n+"번째");
-	//replace()
-			result=str.replace("자바","코코");
-			document.write("원본:  "+str+"<br>");
-			document.write("바뀜:  "+result+"<br>");
-	//slice()
-			str="우리는 지금 자바 스크립트를 배우고 있습니다.";
-			result=str.slice(7,14);
-			document.write("원본:  "+str+"<br>");
-			document.write("바뀜:  "+result+"<br>");
-			result=str.slice(-7);
-			document.write("바뀜:  "+result+"<br>");
-			result=str.slice(-7,-2);
-			document.write("바뀜:  "+result+"<br>");
+		//indexOf
+		str="자바 스크립트의 세계에 오신것을 환영합니다.";
+		n= str.indexOf("세계");
+		document.write("세계 문장열은:" + n+"번째"+"<br>");
+		n= str.indexOf("세계",10);
+		document.write("세계 문장열은:" + n+"번째"+"<br>");
+		n= str.lastIndexOf("세계",10);
+		document.write("세계 문장열은:" + n+"번째"+"<br>");
+		//콘솔창에 출력
+		console.log("세계 문장열은:" + n+"번째");
+		//replace()
+		result=str.replace("자바","코코");
+		document.write("원본:  "+str+"<br>");
+		document.write("바뀜:  "+result+"<br>");
+		//slice()
+		str="우리는 지금 자바 스크립트를 배우고 있습니다.";
+		result=str.slice(7,14);
+		document.write("원본:  "+str+"<br>");
+		document.write("바뀜:  "+result+"<br>");
+		result=str.slice(-7);
+		document.write("바뀜:  "+result+"<br>");
+		result=str.slice(-7,-2);
+		document.write("바뀜:  "+result+"<br>");
+		//concat()
+		result=str.concat(result);
+		document.write("바뀜:  "+result+"<br>");
+		//split()
+		str="a,b,c,d,e,g,h-d";
+		array=str.split(',');
+		for(i=0;i<array.length;i++){
+			document.writeln(array[i]);
+			array[i]
+		}
+		var s= "Ahhhh WAHHHHHH";
+		document.write("BIG:"+ s.big()+"<br>");
+		document.write("small:"+ s.small()+"<br>");
+		document.write("bold:"+ s.bold()+"<br>");
+		document.write("italic:"+ s.italics()+"<br>");
+		document.write("Fixed:"+ s.fixed()+"<br>");
+		document.write("strike:"+ s.strike()+"<br>");
+		document.write("fontcolor:"+ s.fontcolor("green")+"<br>");
+		document.write("Fontsize:"+ s.fontsize(6)+"<br>");
+		document.write("subscripts"+ s.sub()+"<br>");
+		document.write("superscripts"+ s.sup()+"<br>");
+		document.write("Link:"+ s.link("http://www.naver.com")+"<br>");
+		
 	</script>
 </head>
 <body>
