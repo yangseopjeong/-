@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+</head>
+<body>
+    <div id="target">
+        <p>This is a Text.</p>
+    </div>
+    <button onclick="changeColor('start');">시작</button>
+    <button onclick="changeColor('stop');">중지</button>
+    <script>
+        var a;
+        var id;
+        function changeColor(flag) {
+            var elem = document.getElementById("target");
+            a=flag;
+            if(a=="stop"){
+                clearInterval(id);
+                init_element(elem)
+            }
+            else{
+                //setinerval에 들어가는 함수는 인수를 왠만하면 넣지 않는 다.
+                id = setInterval(flashText(elem), 500);
+            }
+        }
+        function flashText(val) {
+            //삼항 연산자
+            val.style.color = (val.style.color == "red") ? "blue" : "red";
+            val.style.backgroundColor = 
+				(val.style.backgroundColor == "green") ? "yellow" : "green";
+
+        }
+        //인터벌 멈추기(삭제)
+
+        function init_element(elem){
+            elem.style.color="black";
+            elem.style.backgroundColor="white";
+        }
+    </script>
+</body>
+</html>
+
+    

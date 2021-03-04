@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>태그이름</title>
+
+</head>
+<body>
+    <ul>
+        <li>List Item 1 <p>123</p></li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ul>
+    <script>
+        var list = document.getElementsByTagName("ul");
+        var allItems = document.getElementsByTagName("li");
+        alert(allItems[0].lastChild.innerHTML);
+    </script>
+</body>
+</html>

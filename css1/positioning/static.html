@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cssExample</title>
+    <style>
+        #one{
+            width: 200px;
+            height: 50px;
+            background-color: skyblue;
+/*            부모위치 기준*/
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        #two{
+            width: 200px;
+            height: 50px;
+            background-color: yellow;
+/*            relative는 원래있어야할자리는 유지하면서 자리 바꿈*/
+            position: relative;
+            left: 100px;
+            top: 50px;
+    
+        }
+        #three{
+            width: 200px;
+            height: 50px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <p id="one">블록1 <br> ppsition:absolute</p>
+    <p id="two">블록2<br>position:relative;</p>
+    <p id="three">블록3 <br> position: static;</p>
+</body>
+</html>

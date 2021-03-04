@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        str = "자바스크립트의 세계에 오신것을 세계 환영합니다.";
+        cnt=0;
+        p=0;
+        while(1){
+            n=str.indexOf("세계",p);
+            if(n==(-1))break;
+            document.write("세계 : "+n+"번째"+"<br>");
+            cnt++;
+            p=n+1;
+        }
+        document.write("총 "+cnt+"번째이다.")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

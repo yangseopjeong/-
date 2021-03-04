@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <style>
+        img:hover{
+            opacity: 0.7;
+        }
+        img{
+            width: 400px;
+            
+        }
+        .transition{
+            width: 100px;
+            border: 3px solid blue;
+            height: 50px;
+            background-color: lightcoral;
+            transition: width 1s,height 2s,transform 2s, background-color 1s,opacity 2s;
+            transition-delay: 0.1s;
+        }
+        .transition:hover{
+            width: 200px;
+            background-color: saddlebrown;
+            height: 50px;
+            transform: rotate(130deg);
+            opacity: 0.1;
+        }
+        .moving div{
+            text-align: center;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            vertical-align: middle;
+        }
+        .box1{
+            background-color: blue;
+            transform: translate(50px,0px);
+        }
+         .box2{
+            background-color: yellowgreen;
+        }
+         .box3{
+            background-color: honeydew;
+        }
+         .box4{
+            background-color: darkgray;
+        }
+        .animation{
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            position: relative;
+            background-color: gainsboro;
+            animation: 5s myAnim;
+        }
+        @keyframes myAnim{
+            0% {left: 0px,top: 0px;}
+            25% {left: 150px,top: 0px;}
+            50% {left: 150px,top: 150px;}
+            75% {left: 0px,top: 150px;}
+            100% {left: 0px,top: 0px;}
+            }
+    </style>
+<body>
+   <div class="opacity">
+    <h1>
+        opacity
+    </h1>
+    <img id="a"src="../../thirdweek/img/coffee2.gif" alt="">
+    <img id="b"src="../../thirdweek/img/coffee3.jpg" alt="">
+    </div>
+    <div class="transition">
+        마우스를 올려보세요.
+    </div>
+    <div class="moving">
+        <h1>move</h1>
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+        <div class="box3">박스3</div>
+        <div class="box4">박스4</div>
+    </div>
+    <div class="animation">
+        asd
+    </div>
+</body>
+</html>

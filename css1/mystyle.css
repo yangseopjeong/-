@@ -1,0 +1,22 @@
+        .title{
+            border: 1px solid red;
+            color: white;
+            background-color: #f0f;
+            font-size: 40px;
+        }
+        .title>a{
+            color: white;
+            font-size: 5px;
+        }
+        .title>div>em{
+            color: lawngreen;
+            font-size: 5px;
+        }
+        .target{
+            margin-top: 10;
+            border: 2px dashed black;
+            background-color: green;
+            color: wheat;
+            font-size: 100px;
+            font-family: sans-serif;
+        }

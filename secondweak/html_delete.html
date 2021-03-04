@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html_delete</title>
+    <script>
+        function removeNode(){
+            var parent=document.getElementById("target");
+            var childs = parent.childNodes;
+            for(var i=0;i<childs.length;i++){
+                //공백 텍스트 노드의 타입은 3이 나온다.
+                if(childs[i].nodeType != 3){
+                    parent.removeChild(childs[i]);
+                    break;
+                }
+            }
+                
+           
+        }
+    </script>
+</head>
+<body>
+    <div id="target">
+        <p id="p1">아이1</p>
+        <p id="p2">아이2</p>
+        <p id="p2">아이3</p>
+        <p id="p2">아이4</p>
+    </div>
+    <button onclick="removeNode()">delete</button>
+</body>
+</html>

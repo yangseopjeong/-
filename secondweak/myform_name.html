@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_and_Id</title>
+    <style>
+    </style>
+    <script>
+        function process(){
+            var textForm1=document.getElementsByName("text1");
+//            textForm1=document.myForm.text1; 위와 똑같은 뜻
+            alert(textForm1.value);
+            
+        }
+    </script>
+</head>
+<body>
+<!--   name을 가지고 하면 서버를 할때 편함-->
+    <form action="" name="myForm">
+        <input type="text" name="text1">
+        <input type="button" value="실행" onclick="process()">
+    </form>
+</body>
+</html>

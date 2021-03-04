@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+    <style>
+        div{
+  position:absolute;
+  left:100px;
+  width:100px;
+  height:50px;
+  margin-left:-50px;
+  background-color:#000;
+  color:#fff;
+  /* 애니메이션 이름 */
+  animation-name: jaehee;
+  animation-duration:2s;
+  animation-duration: leaner;
+  animation-iteration-count:3;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+}
+
+/* 키프레임 이름 = 애니메이션 이름 */
+@keyframes jaehee {
+  0% {
+    left:100px;top:0px;
+  }
+    50%{
+        left:200px;top:100px;
+    }
+  100% {
+    left:300px;top:200px;
+  }
+    </style>
+<body>
+    <div class="animation"></div>
+</body>
+</html>

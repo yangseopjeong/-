@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 2px solid black;
+        }
+        table{
+            background-color: yellow;
+            empty-cells: hide;
+            width: 150px;
+            
+            
+        }
+        th{
+            background-color: green;
+
+        }
+        td{
+            
+            
+        }
+        caption{
+            caption-side: bottom;
+        }
+        .red td{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+       <caption>
+           고객리스트
+       </caption>
+        <tr class="red">
+            <th>1</th>
+            <th rowspan="2">2</th>
+            <th>3</th>
+            <th>4</th>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

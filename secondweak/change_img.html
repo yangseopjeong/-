@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageChange</title>
+</head>
+<body>
+    <img src="img/1.jpg" alt="" id="image" height="400" width="240">
+    <div id="text1">
+        바뀌었습니다.
+    </div>
+    <button onclick="img_change()">change Image</button>
+    <button onclick="change_text()">changeText</button>
+    <script>
+        var flag = 0;
+        function img_change(){
+            var img_var=document.getElementById("image");
+            if(flag==1){
+                flag=0;
+                img_var.src="img/1.jpg";
+            }
+            else{
+                flag=1;
+                img_var.src="img/2.jpg";
+            }
+        }
+        function change_text(){
+            var text1=document.getElementById("text1");
+            if(text1.innerHTML=="바뀌었습니다.")
+                text1.innerHTML=null;
+            else {
+                text1.innerHTML="바뀌었습니다.";
+                text1.style.fontSize="20";
+                text1.style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트</title>
+</head>
+<body>
+    <div id="time">
+        
+    </div>
+    <script>
+        function setClock(){
+        var now= new Date();
+        var s = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+        document.getElementById('time').innerHTML=s;
+        setTimeout('setClock()',1000);
+        }
+        
+        setClock();
+    </script>
+</body>
+</html>

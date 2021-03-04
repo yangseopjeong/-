@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function checkNumeric(elem, msg) {
+//        var exp = /^[1-9][0-9]/; //+는 한자이상 반복, *: 0자 이상 반복
+//          var exp = /^\d{6}-\d{7}$/ //\d{6,8} 6자리에서 8자리 사이 정수
+//          var exp= /^010-\d{3,4}-\d{4}$/
+            var exp=/^\w{6,12}$/ // or [a-zA-Z0-9]
+//            var exp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i; 이메일 정규식
+        if (elem.value.match(exp)) {
+            alert("정상적으로 입력")
+            return true;
+        } else {
+            alert(msg);
+            elem.focus();
+            return false;
+        }
+    }
+</script>
+
+<form>
+전화번호(-없이 입력): <input type='text' id='phone'/>
+<input type='button' 
+	onclick="checkNumeric(document.getElementById('phone'), '')"
+	value='확인' />
+</form>
+
+</body>
+</html>

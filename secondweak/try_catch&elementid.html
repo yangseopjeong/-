@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>오류</title>
+
+</head>
+<body>
+    <h1>
+        Radom&nbsp;Dice
+    </h1>
+    <input type="text" id="num" placeholder="숫자를 입력해주세요.">
+    <input type="button" value="입력" onclick="test()">
+    <p id="messeage"></p>
+    <script>
+        var msg = "";
+        var cnt= 0;
+        var x=0;
+        var solution =Math.floor(Math.random()*100)+1;
+        function test(){
+            try{
+                cnt++;
+                x=document.getElementById("num").value;
+                if(x>solution) throw "크다";
+                else if(x==solution) throw "성공"
+                else if (x<solution) throw "작다";
+            }
+            catch(error){
+                var y = document.getElementById("messeage");
+                if(x==solution)
+                    y.innerHTML="성공했습니다.";
+                else
+                    y.innerHTML="실패:" + error;
+                
+            }
+        }
+    </script>
+</body>
+</html>

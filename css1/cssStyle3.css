@@ -1,0 +1,14 @@
+h1, h2{
+    color: green;
+    font-family: serif;
+    font: 25px 펜흘림, 궁서체;
+}
+strong{
+    color: orange;
+    font: italic 15px 도레미파솔, 견명조;
+    
+}
+li {
+    color: red;
+    font: bold 18px 휴먼 매직체;
+}

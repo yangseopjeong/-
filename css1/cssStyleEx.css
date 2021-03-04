@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    color: red;
+    text-shadow: 1px 2px 10px black;
+    font-family: sans-serif;
+    font: 굴림;
+}
+.date{
+    text-align: right;
+    color: indigo;
+}
+.poet{
+/*    양쪽 정렬*/
+    text-align: justify; 
+    color: blue;
+}
+p.last-child{
+    font-style: italic;
+    text-decoration: underline;
+}
+.test{
+    width: 200px;
+    word-break: break-word;
+    border: 1px dashed black;
+}

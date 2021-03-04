@@ -1,0 +1,58 @@
+@charset "utf-8";
+@charset "utf-8";
+@import url(normalize.css);
+
+/* 초기화 */
+*{
+	margin:0;
+	padding:0;
+}
+
+/* 웹폰트 */
+@font-face {
+    font-family:'Nanum';
+    font-weight:400;
+    src: url('font/NanumGothic.eot');
+    src: url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothic.woff') format('woff'),
+		 url('font/NanumGothic.ttf') format('truetype');
+}
+@font-face {
+    font-family:'NanumBold';
+    font-weight:600;
+    src: url('font/NanumGothicBold.eot');
+    src: url('font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothicBold.woff') format('woff'),
+		 url('font/NanumGothicBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:'NanumEX';
+    font-weight:900;
+    src: url('font/NanumGothicExtraBold.eot');
+    src: url('font/NanumGothicExtraBold.eot?#iefix') format('embedded-opentype'),
+         url('font/NanumGothicExtraBold.woff') format('woff'),
+		 url('font/NanumGothicExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'webcafeIcon';
+    font-weight:400;
+    src: url('font/webcafeIcon.eot');
+    src: url('font/webcafeIcon.eot?#iefix') format('embedded-opentype'),
+         url('font/webcafeIcon.woff') format('woff'),
+         url('font/webcafeIcon.ttf') format('truetype'),
+         url('font/webcafeIcon.svg#webcaferegular') format('svg');
+}
+
+/*이순으로 정의해야 한다.*/
+a:link{
+    color: #4f4f4f;
+    text-decoration: none;
+}
+a:visited{
+    color: #8a8e91;
+    text-decoration: none;
+}
+a:hover, a:focus{
+    color: red;
+    text-decoration: none;
+}
