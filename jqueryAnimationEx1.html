@@ -17,6 +17,7 @@
             display: none;
             position: relative;
         }
+
     </style>
 </head>
 <body>
@@ -25,21 +26,30 @@
     <button id="animate">Animate</button>
     <button id="init">Init</button>
     <button id="auto">Auto</button>
+<!--    .fadeIn( [duration 숫자는 ""안붙이고 넣음 ] [, easing 사라지는 모양] [, complete 나타난 다음 불러올 함수가 들어감] )-->
+    <button id="fade">Fade</button>
+    <button id="slidetoggle">SlideToggle</button>
     <input class="ins" type="text">
     <div class="in">
     <img id="doom" src="OIP.jpg" alt="DOOM" width="300px"><br>
     </div>
 
     <script>
-        var flag=0;
+        //이미지가 보이나 안보이나 확인용 플래그
+        var flag=1;
+        //move에서 이동할 x좌표
         var x=0;
+        //move 에서 거꾸로 갈때 사용할 변수
         var reverse=1;
+        //setinterval제어 변수
         var interval =null;
         $(document).ready(function(){
+            //animate 버튼
             $("#animate").on("click" ,function(){
                 $(".ins").val("animate");
                $("#doom").animate({left: 300*Math.random(), top: 500*Math.random()});
             });
+            //move 버튼
             $("#move").on("click" ,function(){
                 $(".ins").val("move");
                if(x>500){
@@ -52,36 +62,58 @@
                  $("#doom").animate({left: x})
             
             });
+            //초기화 버튼
             $("#init").on("click" ,function(){
                 init();
             });
+            //auto버튼
             $("#auto").on("click" ,function(){
                 //function으로 줘야지만 된다.
                 interval = setInterval(function(){
                     $("#doom").animate({left: 300*Math.random(), top: 500*Math.random()})},1000);
             });
+            //hide and show 버튼
             $("#hide").on("click" ,function(){
-                if(flag==1){
+                if(flag==-1){
                     $("#doom").hide("slow");
                     $(".ins").val("Hide");
-                    flag=0;
+                    flag*=(-1);
                 }
                 else{
                     $("#doom").show("slow");
                     $(".ins").val("Show");
-                    flag=1;
+                    flag*=(-1);
                 }
+            });
+            //fade 버튼
+            $("#fade").on("click", function(){
+                if(flag==1){
+                    $("#doom").fadeIn(3000);
+                    flag=*(-1);
+                }
+                 else {
+                    $("#doom").fadeOut(3000);
+                     flag*=(-1);
+                } 
+            });
+            //슬라이드 토글 버튼
+            $("#slidetoggle").on("click" ,function(){
+                $("#doom").slideToggle(1000);
+                flag*=(-1);
+                
             });
             $(this).keydown(function(event){
                 $(".ins").val(event.keyCode);
             });
         });
+        //초기화 함수
         function init(){
             clearInterval(interval);
             x=0;
             reverse=1;
+            fade_flag=0;
             $("#doom").animate({left: 0, top: 0});
-            flag=0;
+            flag=1;
             $(".ins").val("init");
         }
     </script>
