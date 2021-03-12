@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+    <style>
+        .out{
+            width: 200px;
+            height: 60px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out">
+        <p>마우스를 여기로</p>
+        <p>0</p>
+    </div>
+<!--    아래에다 적어야 인식하였다.-->
+    <script>
+        //전역변수
+        var i=0;
+        $("div.out").mouseleave(function(){
+            $("p:first",this).text("mouse leave");
+            $("p:last",this).text(--i);
+        });
+        $("div.out").mousedown(function(){
+            $("p:first",this).text("mouse click");
+            $("p:last",this).text(++i);
+        });
+    </script>
+</body>
+</html>

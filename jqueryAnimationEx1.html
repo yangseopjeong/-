@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqueryAnimationEx1</title>
+    <script src="jquery-1.12.3.js"></script>
+    <style>
+        .ins{
+            background-color: white;
+            border: none;
+        }
+        img{
+            display: block;
+            margin-top: 20px;
+        }
+        #doom{
+            display: none;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button id="hide">Hide Show</button>
+    <button id="move">Move</button>
+    <button id="animate">Animate</button>
+    <button id="init">Init</button>
+    <button id="auto">Auto</button>
+    <input class="ins" type="text">
+    <div class="in">
+    <img id="doom" src="OIP.jpg" alt="DOOM" width="300px"><br>
+    </div>
+
+    <script>
+        var flag=0;
+        var x=0;
+        var reverse=1;
+        var interval =null;
+        $(document).ready(function(){
+            $("#animate").on("click" ,function(){
+                $(".ins").val("animate");
+               $("#doom").animate({left: 300*Math.random(), top: 500*Math.random()});
+            });
+            $("#move").on("click" ,function(){
+                $(".ins").val("move");
+               if(x>500){
+                reverse=-1;
+               }
+                else if (reverse==-1 &&x ==0){
+                    reverse =1;
+                }
+                x+=(reverse*100);
+                 $("#doom").animate({left: x})
+            
+            });
+            $("#init").on("click" ,function(){
+                init();
+            });
+            $("#auto").on("click" ,function(){
+                //function으로 줘야지만 된다.
+                interval = setInterval(function(){
+                    $("#doom").animate({left: 300*Math.random(), top: 500*Math.random()})},1000);
+            });
+            $("#hide").on("click" ,function(){
+                if(flag==1){
+                    $("#doom").hide("slow");
+                    $(".ins").val("Hide");
+                    flag=0;
+                }
+                else{
+                    $("#doom").show("slow");
+                    $(".ins").val("Show");
+                    flag=1;
+                }
+            });
+            $(this).keydown(function(event){
+                $(".ins").val(event.keyCode);
+            });
+        });
+        function init(){
+            clearInterval(interval);
+            x=0;
+            reverse=1;
+            $("#doom").animate({left: 0, top: 0});
+            flag=0;
+            $(".ins").val("init");
+        }
+    </script>
+</body>
+</html>

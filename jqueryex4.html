@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-1.12.3.js"></script>
+    
+    <style>
+        body{
+            background-color: gainsboro;
+        }
+    </style>
+    </head>
+<body>
+    <div id="log"></div>
+    <script>
+        $(document).mousemove(function(e){
+            $("#log").text("e.pageX : "+e.pageX+",  e.pageY:  "+e.pageY);
+        });
+    </script>
+</body>
+</html>
